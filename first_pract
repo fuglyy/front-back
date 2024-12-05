@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title> Какой-то сайт</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="html.svg">
+        <script src="script.js" defer></script>
+        
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                    <img src="html.svg" alt="logo" width="40">
+                <div>
+                    <p>Группа: ЭФБО-01-23</p>
+                    <p>Сопина Яна Юрьевна</p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <a href="1практика.html">Главная</a>
+                <a href="2практика.html">Первый семестр</a>
+                <a href="#">Второй семестр</a>
+                <a href="1практика2макет.html">Услуги</a>
+                <a href="#">Авторизация</a>
+            </nav>
+        </header>
+        
+        <div class="cool">
+            <nav class="list_navigation">
+                <p>Навигация по странице</p>
+                <a href="#Front">Фронтенд</a>
+                <a href="#Back">Бэкенд</a>
+            </nav>
+            <main class="content">
+                <img src="икона.jpg" alt="girl" id="girl">
+                <div class="welcome">
+                    <h1 id="h1">Добро пожаловать на мой сайт</h1>
+                    <p id="p">Меня зовут Сопина Яна Юрьевна и я начинающий специалист по веб-разработке.</p>                    
+                </div>    
+                <div id="Front">
+                    <h2 id="h2" class="dev front">Фронтенд</h2>
+                    <p class="p" id="animated">Фронтенд (или клиентская часть) - это то, что видит пользователь. Он включает в себя все визуальные
+                        элементы веб-сайта или приложения: кнопки формы изображения и текст. Фронтенд разработчики 
+                        используют языки разметки и стилизации, такие как HTML, CSS и JavaScript, чтобы создавать интерактивные
+                        и привлекательные интерфейсы. Основная задача фронтенда - обеспечить удобство использования и эстетическую
+                        привлекательность.
+                    </p>
+                    <video class="video"
+                        src="https://video-preview.s3.yandex.net/ugc/7109241021534124264_vmaf-preview-10s-720.mp4"
+                        poster="https://static17.tgcnt.ru/posts/_0/87/8711316b7cf5ca8f6780db3aa7d611ba.jpg"
+                        controls
+                    ></video>
+                </div>
+                <div id="Back">
+                    <h2 id="h2" class="dev back">Бэкенд</h2>
+                    <p class="p">Бэкенд (или серверная часть) - это "за кулисами" веб-приложения. Он отвечает за обработку данных, управление пользователями
+                        и взаимодействиес базами данных. Бэкенд разработчики используют языки программирования, такие как Python, Ruby, Java и PHP, 
+                        а также фреймворки и базы данных для создания логики приложения. Основная задача бэкенда - обеспечить стабитльную работу 
+                        приложения и безопасность данных. 
+                    </p>
+
+                    <video class="video"
+                        src="https://video-preview.s3.yandex.net/JaAwTQIAAAA.mp4"
+                        poster="https://leader-id.storage.yandexcloud.net/upload/2168307/689d4a0a-bd1c-429e-ad68-dbbd8e1f781f.jpg"
+                        controls
+                    ></video>
+                </div>
+            </main>
+        </div>
+        <footer>
+            <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+            <p>&copy; Сопина Яна Юрьевна, 2024</p>
+            <div class="social-media">
+                <a href="https://vk.com/ffuglyy"><img src="vk.png" alt="vk"></a>
+                <a href="https://t.me/sp_yanaa"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="tg"></a>
+            </div>
+        </footer>
+    </body>
+    <script>
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+    </script> 
+    <script src="script.js"></script>
+</html>

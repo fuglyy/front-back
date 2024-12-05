@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width">
+        <title> Какой-то сайт</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="icon" href="html.svg">
+        
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                    <img src="html.svg" alt="logo" width="40">
+                <div>
+                    <p>Группа: ЭФБО-01-23</p>
+                    <p>Сопина Яна Юрьевна</p>
+                </div>
+            </div>
+            <nav class="navigation">
+                <a href="1практика.html">Главная</a>
+                <a href="2практика.html">Первый семестр</a>
+                <a href="#">Второй семестр</a>
+                <a href="1практика2макет.html">Услуги</a>
+                <a href="#">Авторизация</a>
+            </nav>
+        </header>
+        
+        <div class="cool">
+            <nav class="list_navigation">
+                <p>Навигация по странице</p>
+                <a href="#Front">Фронтенд</a>
+                <a href="#Back">Бэкенд</a>
+            </nav>
+            <main class="develop">
+                <h2>Разработка веб-приложений</h2>
+                <div class="figures">
+                    <figure>
+                        <a href="1практика.html"><img src="магазин.webp" alt="Сайт-визитка" width=260></a>
+                        <figcaption>Сайт-визитка</figcaption>
+                        <button type="submit" id="openModal">Заказать</button>
+                    </figure>
+                    
+                    <figure>
+                        <a href="#"><img src="магазин.webp" alt="Корпоративный сайт" width=260></a>
+                        <figcaption>Корпоративный сайт</figcaption>
+                        <button type="submit" id="openModal1">Заказать</button>
+                    </figure>
+                    <figure>
+                        <a href="#"><img src="магазин.webp" alt="Интернет-магазин" width=260></a>
+                        <figcaption>Интернет-магазин</figcaption>
+                        <button type="submit" id="openModal2">Заказать</button>
+                    </figure>
+                </div>  
+                <p>Господа, высокотехнологичная концепция общественного уклада позволяет выполнить важные задания по разработке анализа существующих паттернов поведения. С другой стороны, начало повседневной работы по формированию позиции говорит о возможностях поставленных обществом задач. Каждый из нас понимает очевидную вещь: новая модель организационной деятельности не оставляет шанса для вывода текущих активов.</p>
+            </main>
+        </div>
+        <footer>
+            <button class="scroll-to-top" onclick="scrollToTop()">↑</button>
+            <p>&copy; Сопина Яна Юрьевна, 2024</p>
+            <div class="social-media">
+                <a href="https://vk.com/ffuglyy"><img src="vk.png" alt="vk"></a>
+                <a href="https://t.me/sp_yanaa"><img src="https://upload.wikimedia.org/wikipedia/commons/8/82/Telegram_logo.svg" alt="tg"></a>
+            </div>
+        </footer>
+        <div id="modal" class="modal">
+            <div class="modal-content">
+                <span id="close" class="close"></span>
+                <div class="top">
+                    <h1>Разработка веб-приложения</h1>
+                <p>Заполните форму и мы обязательно свяжемся с вами в ближайшее время для уточнения деталей</p>
+                </div>
+                <form id="contactForm">
+                    <div class="lable">
+                        <label for="name">Как вас зовут</label>
+                        <label for="mail">Ваш e-mail</label>
+                        <label for="number">Телефон</label>
+                        <label for="country">Страна</label>
+                        <label for="date">Дата</label>
+                        <label for="comment">Комментарий</label>   
+                    </div>
+                    <div class="input">
+                        <input type="text" name="name" placeholder="Иванов Иван Иванович" required>
+                        <input type="email" name="mail" placeholder="test@mail.ru" required>
+                        <input type="tel" class="mask-tel" name="number" placeholder="+7 919 999 99 99" required>
+                        <select name="country" id="country">
+                            <option>Россия</option>
+                            <option>Китай</option>
+                            <option>Нидерланды</option>
+                            <option>Испания</option>
+                            <option>Южная Корея</option> 
+                        </select>
+                        <input type="date" name="date" required>
+                        <textarea name="comment"></textarea>
+                    </div>
+                    <input type="hidden" id="service">
+                    <div class="data">
+                        <input type="checkbox" id="data" required>
+                        <label for="data">Согласен на обработку моих перслнальных данных</label>
+                    </div>
+                        <button type="submit" class="data-button">Отправить заявку</button>
+                        <div class="message" id="successMessage"></div>
+                </form>
+                
+            </div>
+            
+        </div>
+        <script>
+            const modal = document.getElementById("modal");
+            const btn = document.getElementById("openModal");
+            const btn1 = document.getElementById("openModal1");
+            const btn2 = document.getElementById("openModal2");
+            const span = document.getElementsByClassName("close")[0];
+            const form = document.getElementById("contactForm");
+            const message = document.getElementById("successMessage");
+            const service1 = document.getElementById("service");
+
+
+            btn.onclick = function() {
+                modal.style.display = "block";
+                service1.value = "visit";
+                document.body.style.overflow = 'hidden';
+            }
+
+            btn1.onclick = function() {
+                modal.style.display = "block";
+                service1.value = "corporate";
+                document.body.style.overflow = 'hidden';
+            }
+
+            btn2.onclick = function() {
+                modal.style.display = "block";
+                service1.value = "shop";
+                document.body.style.overflow = 'hidden';
+            }
+
+
+            span.onclick = function() {
+                modal.style.display = "none";
+                document.body.style.overflow = '';
+                form.reset();
+            }
+
+            window.onclick = function(event) {
+                if (event.target === modal) {
+                    modal.style.display = "none";
+                    document.body.style.overflow = '';
+                    form.reset(); 
+                    message.style.display = "none";
+                }
+            }
+
+
+            const formData = {
+                name: '',
+                email: '',
+                phone: '',
+                date: '',
+                comment: '',
+                printData: function() {
+                    alert(`Имя: ${this.name}\nE-mail: ${this.email}\nТелефон: ${this.phone}\nДата: ${this.date}\nКомментарий: ${this.comment}`);
+                }
+            };
+
+            function submitForm(event) {
+                event.preventDefault();
+
+                const name = form.name.value.trim();
+                const email = form.mail.value.trim();
+                const phone = form.number.value.trim();
+                const date = form.date.value;
+                const comment = form.comment.value.trim();
+
+                if (!name || !email || !comment) {
+                    alert("Заполните все обязательные поля");
+                    return;
+                }
+
+
+                if (!/^\d+$/.test(phone)) {
+                    alert("Телефон может содержать только цифры");
+                    return;
+                }
+
+                const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (!emailPattern.test(email)) {
+                    alert("Некорректный формат e-mail");
+                    return;
+                }
+
+                formData.name = name;
+                formData.email = email;
+                formData.phone = phone;
+                formData.date = date;
+                formData.comment = comment;
+
+
+                formData.printData();
+
+                message.textContent = "Форма успешно отправлена";
+                message.style.color = 'green';
+                message.style.marginLeft = "33%";
+                setTimeout(() => {
+                    message.style.color = 'transparent';
+                    message.style.display = "none";
+                }, 2000);
+            }
+            form.addEventListener('submit', submitForm);
+
+            function scrollToTop() {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            }
+        </script>
+    </body>
+</html>

@@ -1,7 +1,6 @@
 function showMessage(){
     console.log("Скрипт загружен");
 }
-
 function toggleVisibility(selector) {
     const element = document.querySelector(selector);
     if (element) {
